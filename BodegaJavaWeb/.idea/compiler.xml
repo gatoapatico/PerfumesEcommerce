@@ -12,7 +12,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="BodegaJavaWeb" options="-endorseddirs C:\Users\aferz\OneDrive\Escritorio\BodegaJavaWeb-main\BodegaJavaWeb\target/endorsed" />
+      <module name="BodegaJavaWeb" options="-endorseddirs &quot;C:\Users\aferz\OneDrive\Escritorio\Ciclo Siete\Desarrollo Web Integrado\PerfumesEcommerce\BodegaJavaWeb\target/endorsed&quot;" />
     </option>
   </component>
 </project>
