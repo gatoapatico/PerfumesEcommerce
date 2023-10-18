@@ -1,0 +1,2340 @@
+@font-face {
+    font-family: 'Baloo Chettan';
+    src: url('assets/font/BalooChettan2-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'Average Sans';
+    src: url('assets/font/AverageSans-Regular.ttf');
+}
+
+html {
+    font-family: 'Average Sans';
+    color: #232323;
+    font-size: 28px;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 1.5em;
+    /* border-bottom: 1px solid #cecece; */
+    gap: 15px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    
+    & .nombre-usuario{
+        font-weight: bold;
+    }
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo-contenedor {
+    display: flex;
+}
+
+header img {
+    width: 200px;
+}
+
+header a {
+    color: #232323;
+    text-decoration: none;
+    font-size: 0.571rem;
+}
+
+.buscador {
+    background-color: #f0f0f0;
+    margin: auto 0;
+    padding: 0.3em 0.534em;
+    border-radius: 25px;
+    display: flex;
+
+    & button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.buscador input {
+    width: 30vw;
+    background-color: inherit;
+    border: none;
+    margin: 0 0 0 1em;
+    color: rgb(133, 133, 133);
+    font-size: 0.367rem;
+}
+
+.buscador input:focus {
+    outline: none;
+    border: none;
+}
+
+.buscador i {
+    font-size: 0.367rem;
+    color: rgb(133, 133, 133);
+}
+
+header .carrito {
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+header .user {
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.landing {
+    background-image: url('assets/img/bg_bodega_alpha.png');
+    background-size: cover;
+    font-family: 'Baloo Chettan';
+    position: relative;
+}
+
+.titles {
+    max-width: 55vw;
+    text-align: center;
+    padding: 6em 0em 0em 2em;
+}
+
+.señora-imagen {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    scale: 1.5;
+    margin: 8em 7em 0 auto;
+}
+
+/* LAYOUT */
+
+.banner {
+    width: 100%;
+    height: 120px;
+    background-color: #614BC3;
+    margin: 3em 0 0 0;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.banner img {
+    width: 130px;
+}
+
+
+/* TYPOGRAPHY */
+
+.titles h1 {
+    color: #232323;
+    margin: 0;
+    font-size: 2.3rem;
+    line-height: 1;
+}
+
+.titles p {
+    margin: 0;
+    color: #848484;
+    line-height: 1.3;
+    margin-top: 0.7em;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.btn-comprar {
+    background-color: #614BC3;
+    border: none;
+    font-family: inherit;
+    font-weight: bold;
+    color: white;
+    border-radius: 30px;
+    padding: 0.5em 3em;
+    font-size: 0.7rem;
+    cursor: pointer;
+    margin: 2em;
+    text-decoration: none;
+}
+
+
+
+.bg-black-wall {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    opacity: 50%;
+}
+
+.popup {
+    background-color: white;
+    border-radius: 25px;
+    width: 450px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 0 10px 50px rgb(59, 59, 59);
+}
+
+.popup-login {
+    height: 330px;
+}
+
+.popup-registrate {
+    height: 440px;
+}
+
+.form {
+    color: #232323;
+    width: 380px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.form h1 {
+    color: #232323;
+    font-size: 1.33rem;
+    text-align: center;
+    border-bottom: 1px solid #232323;
+    margin-bottom: 0.5em;
+}
+
+.form input {
+    color: #232323;
+    font-size: 0.8rem;
+    margin: 0.5em 0 1em 0;
+    padding: 0.2em 0.2em;
+    border: none;
+    border-bottom: 1px solid #848484;
+}
+
+.form input:focus {
+    outline: none;
+}
+
+.form input::placeholder {
+    color: #848484;
+}
+
+.form button {
+    background-color: #614BC3;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    width: 70%;
+    align-self: center;
+    padding: 0.25em;
+    cursor: pointer;
+}
+
+.form p {
+    margin: 0.2em 0 0 0;
+    font-size: 0.6rem;
+    text-align: center;
+}
+
+.form span {
+    font-size: 1.2em;
+    border-bottom: 1px solid #232323;
+    cursor: pointer;
+}
+
+.form span:active {
+    color: #614BC3;
+}
+
+
+/*---------------------- PAGINA PRODUCTOS ------------------------------------------------------------*/
+
+.main-productos {
+    font-family: 'Baloo Chettan';
+}
+
+.categorias {
+    background-color: #614BC3;
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+    font-family: 'Average Sans';
+    margin-bottom: 0.5em;
+}
+
+.categorias button {
+    font-family: inherit;
+    font-size: 0.5rem;
+    color: white;
+    font-weight: lighter;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.categorias button:active {
+    color: #dddddd;
+}
+
+.main-productos h1 {
+    margin: 0;
+    text-align: center;
+}
+
+.catalogo {
+    margin: 1em 3em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+
+    .producto {
+        width: 300px;
+
+        & .imagen {
+            height: 300px;
+            background-color: #f0efed;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0.5em;
+
+            & img {
+                width: 250px;
+            }
+        }
+
+        & p {
+            margin: 0;
+            font-size: 0.857rem;
+            margin-left: 0.5em;
+        }
+
+        & .marca {
+            color: #9a9a9a;
+        }
+
+        & .precio {
+            color: #33BBC5;
+            font-size: 1.14rem;
+        }
+
+        & .btn-agregar {
+            background-color: #614BC3;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 0.5em 1.5em;
+            display: block;
+            margin: 1em auto;
+            font-size: 0.8rem;
+            cursor: pointer;
+        }
+
+        & .btn-agregar:hover {
+            background-color: #503ea1;
+        }
+
+        & .btn-agregar:active {
+            background-color: #493891;
+            color: #dbdbdb;
+        }
+    }
+}
+
+.fixed {
+    position: fixed;
+    top: 3em;
+    right: 1em;
+}
+
+.popup-agregar-producto {
+    border-radius: 5px;
+    background-color: #33BBC5;
+    width: 270px;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    opacity: 90%;
+
+    & p {
+        margin: 0;
+        font-size: 0.6rem;
+        color: #232323;
+
+        & i {
+            margin-right: 0.3em;
+        }
+
+        & span {
+            font-weight: bold;
+        }
+    }
+}
+
+.popup-login-fail {
+    border-radius: 5px;
+    background-color: red;
+    width: 270px;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    opacity: 90%;
+
+    & p {
+        margin: 0;
+        font-size: 0.6rem;
+        color: white;
+
+        & i {
+            margin-right: 0.3em;
+        }
+
+        & span {
+            font-weight: bold;
+        }
+    }
+}
+
+/*---------------------- PAGINA CARRITO ------------------------------------------------------------*/
+
+.main-carrito {
+
+    & .categorias {
+
+        & a {
+            font-family: inherit;
+            font-size: 0.5rem;
+            color: white;
+            font-weight: lighter;
+            text-decoration: none;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
+
+    & h1 {
+        font-family: 'Baloo Chettan';
+        margin-left: 1em;
+    }
+
+    & .paneles {
+        display: flex;
+        justify-content: space-around;
+
+        & .productos {
+            border: 1px solid #f0efed;
+            border-radius: 15px;
+            width: 40vw;
+            min-height: 400px;
+
+            & .mensaje-carrito-vacio {
+                font-family: 'Baloo Chettan';
+                font-size: 0.7rem;
+                font-weight: bold;
+                text-align: center;
+                color: #9a9a9a;
+            }
+
+            & .producto {
+                display: flex;
+                margin: 0.8em;
+                padding-bottom: 0.8em;
+                border-bottom: 1px solid #f0efed;
+                
+                & .imagen {
+                    background-color: #f0efed;
+                    width: 100px;
+                    min-width: 100px;
+                    height: 100px;
+                    border-radius: 7px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 1em;
+        
+                    & img {
+                        width: 80px;
+                    }
+                }
+        
+                & .info {
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+
+                    & p {
+                        margin: 0;
+                        font-size: 0.7rem;
+                    }
+        
+                    & .precio {
+                        display: flex;
+                        margin: auto 0 0 0;
+
+                        & .unidad {
+                            color: #818181;
+                            width: 100px;
+                        }
+
+                        & .acumulado {
+                            display: flex;
+                            gap: 0.5em;
+
+                            & .subtitulo {
+                                font-size: 0.5rem;
+                                align-self: flex-end;
+                            }
+
+                            & .subtotal {
+                                color: #33BBC5;
+                            }
+                        }
+                    }
+                }
+
+                & .ux {
+                    display: flex;
+                    flex-direction: column;
+                    width: 12vw;
+
+                    & .btn-remove {
+                        border: none;
+                        background-color: transparent;
+                        color: #614BC3;
+                        font-size: 0.8rem;
+                        cursor: pointer;
+                        align-self: flex-end;
+                    }
+
+                    & .btn-remove:active {
+                        color: #2a2053;
+                    }
+
+                    & .quantity {
+                        margin: auto 0 0 0;
+                        display: flex;
+                        justify-content: end;
+                        
+                        & button {
+                            width: 40px;
+                            font-size: 0.8rem;
+                            border: none;
+                            background-color: #f0efed;
+                            cursor: pointer;
+                        }
+
+                        & button:active {
+                            background-color: #d8d8d8;
+                        }
+
+                        & .btn-sub {
+                            border-top-left-radius: 15px;
+                            border-bottom-left-radius: 15px;
+                        }
+
+                        & .btn-add {
+                            border-top-right-radius: 15px;
+                            border-bottom-right-radius: 15px;
+                        }
+
+                        & p {
+                            margin: 0;
+                            background-color: #f0efed;
+                            padding: 0 0.5em;
+                            width: 30px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+
+        & .resumen {
+            border: 1px solid #f0efed;
+            border-radius: 15px;
+            width: 30vw;
+            font-size: 0.7rem;
+            align-self: flex-start;
+
+            & .info {
+
+                & p {
+                    margin: 1em;
+                }
+
+                & .titulo {
+                    font-weight: bold;
+                }
+
+                & .subtotal {
+                    color: #aaaaaa;
+                    display: flex;
+
+                    & span {
+                        margin-left: auto;
+                        font-weight: bold;
+                    }
+                }
+
+                & .descuento {
+                    color: #aaaaaa;
+                    display: flex;
+
+                    & span {
+                        margin-left: auto;
+                        font-weight: bold;
+                        color: #614BC3;
+                    }
+                }
+
+                & .total {
+                    font-weight: bold;
+                    border-top: 1px solid #f0efed;
+                    padding-top: 0.8em;
+                    display: flex;
+                    font-size: 0.8rem;
+
+                    & span {
+                        margin-left: auto;
+                    }
+                }
+            }
+
+            & .ux {
+                padding: 0.4em 1em 3em 1em;
+
+                & a {
+                    width: 100%;
+                    background-color: #614BC3;
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 50px;
+                    padding: 0.5em 0;
+                    margin-top: 1em;
+                    font-size: 0.7rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+
+                    & i {
+                        margin-left: 0.2em;
+                        font-size: 1rem;
+                    }
+                }
+
+                & a:active {
+                    background-color:#493891;
+                }
+            }
+        }
+    }
+}
+
+
+/*---------------------- PAGINA PEDIDO ------------------------------------------------------------*/
+
+.main-pedido {
+
+    & .categorias {
+
+        & a {
+            font-family: inherit;
+            font-size: 0.5rem;
+            color: white;
+            font-weight: lighter;
+            text-decoration: none;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
+
+    & h1 {
+        font-family: 'Baloo Chettan';
+        margin-left: 1em;
+    }
+
+    & .paneles {
+        margin: 0 3em 1em 3em;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content: center;
+        font-family: 'Average Sans';
+        align-items: start;
+
+        & .campo-fail {
+            color: red;
+            font-size: 0.5rem;
+            font-weight: 100;
+        }
+
+        & .usuario {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            width: 855px;
+
+            & .titulo {
+                display: flex;
+                gap: 0.5em;
+                align-items: center;
+                
+
+                & .icono {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #614BC3;
+
+                    & i {
+                        color: white;
+                        font-size: 0.8rem;
+                    }
+                }
+
+                & h1 {
+                    margin: 0;
+                    font-size: 0.8rem;
+                    font-family: inherit;
+                    color: #614BC3;
+                }
+            }
+
+            & .identificacion {
+                width: 400px;
+                border-radius: 15px;
+                background-color: #F0EFED;
+                padding: 0.7em;
+                box-sizing: border-box;
+                align-self: flex-start;
+
+                & p {
+                    margin: 0.5em;
+                    font-size: 0.6rem;
+                    color: #848484;
+                }
+
+                & .ux {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 13px;
+                
+                    & .dato-input {
+                        display: flex;
+                        flex-direction: column;
+                        font-size: 0.6rem;
+                        color: #b4b4b4;
+                        margin: 0.5em 0;
+                        width: 48%;
+
+                        & input {
+                            padding: 0.5em;
+                            border: 1px solid #b4b4b4;
+                            border-radius: 7px;
+                            color: #848484;
+                        }
+
+                        & input:focus {
+                            outline: none;
+                            box-shadow: 0 0 10px #614BC3;
+                        }
+
+                        & select {
+                            padding: 0.45em;
+                            border: 1px solid #b4b4b4;
+                            border-radius: 7px;
+                            color: #848484;
+                        }
+
+                        & select:focus {
+                            outline: none;
+                            box-shadow: 0 0 10px #614BC3;
+                        }
+                    }
+
+                    & .whole {
+                        width: 100%;
+                    }
+                }
+
+                & button {
+                    color: #614BC3;
+                    font-size: 0.7rem;
+                    width: 100%;
+                    border: none;
+                    background-color: transparent;
+                    margin: 1.5em 0 0.5em 0;
+                    cursor: pointer;
+                }
+
+                & button:active {
+                    color: #2a2053;
+                }
+
+                & .contenido2 {
+
+                    & .btn-cerrar {
+                        cursor: pointer;
+                        color: #614BC3;
+                    }
+
+                    & .nombre-completo, .documento-telefono {
+                        margin-top: 0;
+                        margin-bottom: 0;
+                    }
+
+                    & a {
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            & .envio {
+                width: 400px;
+                border-radius: 15px;
+                background-color: #F0EFED;
+                padding: 0.7em;
+                box-sizing: border-box;
+                align-self: flex-start;
+
+                & p {
+                    margin: 0.5em 0;
+                    text-align: center;
+                    font-size: 0.7rem;
+                    color: #848484;
+                }
+
+                & .metodos {
+                    display: flex;
+                    justify-content: space-evenly;
+    
+                    & .metodo {
+                        border-radius: 5px;
+                        width: 47%;
+                        background-color: white;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 0.6em 0 0.3em 0;
+                        cursor: pointer;
+    
+                        & p {
+                            font-size: 0.57rem;
+                            color: #9a9a9a;
+                        }
+                    }
+    
+                    & .metodo-activo {
+                        box-shadow: 0 0 10px #614BC3;
+                    }
+                }
+
+                & .ui-envio {
+
+                    & .contenido-domicilio {
+
+                        & .dato-input {
+                            display: flex;
+                            flex-direction: column;
+                            font-size: 0.6rem;
+                            color: #b4b4b4;
+                            margin: 0.5em 0;
+                            width: 48%;
+    
+                            & input {
+                                padding: 0.5em;
+                                border: 1px solid #b4b4b4;
+                                border-radius: 7px;
+                                color: #848484;
+                            }
+    
+                            & input:focus {
+                                outline: none;
+                                box-shadow: 0 0 10px #614BC3;
+                            }
+    
+                            & select {
+                                padding: 0.45em;
+                                border: 1px solid #b4b4b4;
+                                border-radius: 7px;
+                                color: #848484;
+                            }
+    
+                            & select:focus {
+                                outline: none;
+                                box-shadow: 0 0 10px #614BC3;
+                            }
+                        }
+    
+                        & .whole {
+                            width: 100%;
+                        }
+                    }
+
+                    & p {
+                        text-align: start;
+                        font-size: 0.57rem;
+                        word-spacing: 5px;
+                        margin: 1em 0;
+                    }
+
+                    & .direccion {
+                        display: flex;
+                        background-color: white;
+                        padding: 0.5em 0;
+                        border-radius: 5px;
+                        margin-top: 0.5em;
+
+                        & i {
+                            color: #614BC3;
+                            font-size: 1.5rem;
+                            margin-left: 1em;
+                        }
+
+                        & .info {
+                            display: flex;
+                            flex-direction: column;
+                            margin-left: 0.5em;
+
+                            & .titulo {
+                                font-weight: bold;
+                                color: #232323;
+                            }
+
+                            & p {
+                                margin: 0;
+                                word-spacing: 0;
+                            }
+
+                            & button {
+                                color: #614BC3;
+                                background-color: transparent;
+                                font-family: inherit;
+                                text-align: start;
+                                margin-top: 0.5em;
+                                border: none;
+                                cursor: pointer;
+                                margin-right: auto;
+                            }
+
+                            & button:active {
+                                color: #2a2053;
+                            }
+                        }
+                    }
+
+                    & .fecha {
+                        height: 100px;
+                        border-radius: 5px;
+                        margin: 0.5em 0;
+                        background-color: white;
+                        padding: 0.5em 0;
+
+                        & button {
+                            color: #614BC3;
+                            border: 1px solid #614BC3;
+                            border-radius: 5px;
+                            font-size: 0.6rem;
+                            background-color: transparent;
+                            padding: 0.4em 1.1em;
+                            display: block;
+                            margin: 0 auto;
+                            cursor: pointer;
+
+                            & i {
+                                margin-left: 0.5em;
+                            }
+                        }
+
+                        & button:active {
+                            color: #2a2053;
+                            border: 1px solid #2a2053;
+                        }
+
+                        & .input-fecha-entrega {
+                            box-sizing: border-box;
+                            width: 80%;
+                            display: block;
+                            margin: 1em auto;
+                            color: #aaaaaa;
+                            border: 1px solid #aaaaaa;
+                            padding: 0.3em 1em;
+                            border-radius: 5px;
+                            margin-bottom: 0;
+                        }
+
+                        & .input-fecha-entrega:focus {
+                            outline: none;
+                            box-shadow: 0 0 10px #614BC3;
+                        }
+
+                        & b {
+                            margin: 1em;
+                        }
+                    }
+
+                    & .fecha-resumen {
+
+                        & b {
+                            font-size: 0.7rem;
+                            font-family: inherit;
+                            color: #232323;
+                        }
+
+                        & p {
+                            word-spacing: 0;
+                            margin: 0.2em 0 0.5em 0;
+                        }
+
+                        & .btn-cambiar-fecha {
+                            color: #614BC3;
+                            cursor: pointer;
+                        }
+
+                        & .btn-cambiar-fecha:active {
+                            color: #2a2053;
+                        }
+
+                        & select {
+                            padding: 0.45em;
+                            border: 1px solid #b4b4b4;
+                            border-radius: 7px;
+                            color: #848484;
+                            width: 100%;
+
+                            & option:disabled {
+                                color: #e3e3e3;
+                            }
+                        }
+
+                        & select:focus {
+                            outline: none;
+                            box-shadow: 0 0 10px #614BC3;
+                        }
+                    }
+                }
+
+                & .recojo {
+
+                    & p {
+                        color: #232323;
+                        font-size: 0.6rem;
+                        text-align: start;
+                    }
+
+                    & .datos {
+                        color: #9a9a9a;
+                        font-size: 0.5rem;
+                        display: flex;
+                        align-items: center;
+                        border: 1px solid #cecece;
+                        border-radius: 5px;
+                        padding: 0.3em 0.7em;
+
+                        & i {
+                            font-size: 0.8rem;
+                            color: #614BC3;
+                        }
+
+                        & input {
+                            background-color: transparent;
+                            border: none;
+                            color: #9a9a9a;
+                            font-size: 0.5rem;
+                            font-family: inherit;
+                        }
+
+                        & input:focus {
+                            outline: none;
+                        }
+
+                        & input:nth-child(1) {
+                            width: 70px;
+                        }
+
+                        & input:nth-child(2) {
+                            width: 120px;
+                        }
+
+                        & .cambiar {
+                            color: #614BC3;
+                            cursor: pointer;
+                            margin-left: 0.5em;
+                        }
+
+                        & .cambiar:active {
+                            color: #2a2053;
+                        }
+                    }
+                }
+
+                & .btn-pago {
+                    background-color: #614BC3;
+                    width: 100%;
+                    color: white;
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 0.7rem;
+                    padding: 0.55em 0;
+                    margin: 1em 0;
+                    cursor: pointer;
+    
+                    & i {
+                        margin-left: 0.5em;
+                    }
+                }
+    
+                & .btn-pago:active {
+                    background-color: #503ea1;
+                    color:#F0EFED;
+                }
+
+                & .contenido2 {
+
+                    & p {
+                        text-align: start;
+                    }
+
+                    & .direccion {
+                        color: #9a9a9a;
+                        font-size: 0.57rem;
+                    }
+
+                    & .subtitulo {
+                        color: #232323;
+                        font-size: 0.71rem;
+                    }
+
+                    & .fecha {
+                        color: #9a9a9a;
+                        font-size: 0.57rem;
+                    }
+
+                    & .btn-cambiar {
+                        font-family: inherit;
+                        font-size: 0.7rem;
+                        background-color: transparent;
+                        border: none;
+                        cursor: pointer;
+                        width: 100%;
+                        color: #787878;
+                    }
+                }
+            }
+
+            & .pago {
+                width: 855px;
+                border-radius: 15px;
+                background-color: #F0EFED;
+                padding: 0.7em;
+                box-sizing: border-box;
+                align-self: flex-start;
+            
+                & .secciones {
+                    display: flex;
+                    justify-content: center;
+                    gap: 2em;
+                    padding: 1em 0;
+
+                    & .metodo {
+                        width: 25%;
+                        display: flex;
+                        background-color: #e7e7e7;
+                        justify-content: center;
+                        padding: 0.3em 0.5em;
+                        border-radius: 5px;
+                        gap: 0.5em;
+                        align-self: flex-start;
+
+                        & p {
+                            margin: 0;
+                            font-size: 0.71rem;
+                            color: #8a8a8a;
+                        }
+
+                        & .icono {
+                            background-color: #cecece;
+                            width: 30px;
+                            height: 30px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 50%;
+
+                            & i {
+                                font-size: 0.65rem;
+                            }
+                        }
+                    }
+
+                    & .info {
+                        border-radius: 5px;
+                        width: 55%;
+                        background-color: #e7e7e7;
+                        padding: 0.5em;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.5em;
+
+                        & .botones-comprobantes-tipo {
+
+                            & .btn-comprobante {
+                                width: 150px;
+                                padding: 0.5em 0;
+                                border-radius: 5px;
+                                border: none;
+                                box-shadow: 1px 1px 1px #232323;
+                                margin-bottom: 1em;
+                                cursor: pointer;
+                            }
+
+                            & .btn-activo {
+                                background-color: #614BC3;
+                                color: white;
+                            }
+
+                            & .btn-activo:active {
+                                background-color: #493891;
+                            }
+
+                            & .btn-pasivo {
+                                background-color: white;
+                                color: #232323;
+                            }
+
+                            & .btn-pasivo:active {
+                                background-color: #dfdfdf;
+                            }
+                        }
+
+                        & .dato-input {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0.3em;
+
+                            & label {
+                                font-size: 0.5rem;
+                                color: #848484;
+                            }
+
+                            & p {
+                                margin: 0;
+                                font-size: 0.5rem;
+                                color: #848484;
+
+                                & input {
+                                    width: 50px;
+                                }
+                            }
+
+                            & input {
+                                border-radius: 5px;
+                                border: 1px solid #9a9a9a;
+                                padding: 0.5em 1em;
+                                color: #9a9a9a;
+                            }
+
+                            & input:focus {
+                                outline: none;
+                                box-shadow: 0 0 10px #614BC3;
+                            }
+
+                            & .small {
+                                width: 13.5%;
+                            }
+                            
+                            & .tipo-tarjeta {
+                                display: flex;
+                                align-items: center;
+                                gap: 0.5em;
+                                margin-left: 0.5em;
+                            }
+
+                            & .listas {
+                                display: flex;
+                                gap: 0.5em;
+
+                                & select {
+                                    border-radius: 5px;
+                                    border: 1px solid #9a9a9a;
+                                    padding: 0.5em 1em;
+                                    color: #9a9a9a;
+                                    width: 20%;
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                & .contenido2 {
+
+                    & p {
+                        font-size: 0.57rem;
+                        color: #848484;
+                        margin-left: 3.5em;
+                    }
+                }
+            }
+        }
+
+        & .resumen {
+            min-width: 400px;
+            width: 400px;
+            align-self: flex-start;
+
+            & .titulo {
+                display: flex;
+                gap: 0.5em;
+                align-items: center;
+                margin-bottom: 0.5em;
+                
+
+                & .icono {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #614BC3;
+
+                    & i {
+                        color: white;
+                        font-size: 0.8rem;
+                    }
+                }
+
+                & h1 {
+                    margin: 0;
+                    font-size: 0.8rem;
+                    font-family: inherit;
+                    font-weight: lighter;
+                    color: #848484;
+                }
+            }
+
+            & .productos {
+                
+                & .producto {
+                    display: flex;
+                    margin: 0 1em;
+                    padding-bottom: 0.8em;
+                    align-items: center;
+                    
+                    & .imagen {
+                        background-color: #f0efed;
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 7px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 1em;
+            
+                        & img {
+                            width: 50px;
+                        }
+                    }
+            
+                    & .info {
+                        width: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.1em;
+    
+                        & p {
+                            margin: 0;
+                            font-size: 0.7rem;
+                        }
+
+                        & .nombre {
+                            color: #8a8a8a;
+                        }
+
+                        & .cantidad {
+                            background-color: #614BC3;
+                            color: white;
+                            margin: 0 auto 0 0;
+                            padding: 0.1em 2em;
+                            border-radius: 5px;
+                        }
+            
+                        & .precio {
+                            color: #614BC3;
+                            margin: auto auto 0 0;
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+
+            & .total-resumen {
+                border-radius: 5px;
+                padding: 0.6em;
+                margin: 1em 0 1.5em 0;
+                box-shadow: 0 0 10px #bbbbbb;
+
+                & p{
+                    margin: 0;
+                    font-family: 'Baloo Chettan';
+                    font-weight: bold;
+                    font-size: 0.75rem;
+                    color: #aaaaaa;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 0.3em;
+
+                    & span {
+                        font-weight: lighter;
+                    }
+
+                    & .color {
+                        color: #614BC3;
+                    }
+                }
+
+                & .total {
+                    border-top: 1px solid #aaaaaa;
+                    padding-top: 0.5em;
+                    & span {
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            & button {
+                width: 100%;
+                border-radius: 5px;
+                font-size: 0.7rem;
+                padding: 0.55em 0;
+                margin: 0.5em 0;
+                cursor: pointer;
+
+                & i {
+                    margin-right: 0.5em;
+                }
+            }
+
+            & a {
+                font-family: 'Average Sans';
+                color: #614BC3;
+                display: block;
+                width: 100%;
+                border-radius: 5px;
+                font-size: 0.8rem;
+                padding: 0.55em 0;
+                margin: 0.5em 0;
+                cursor: pointer;
+                text-align: center;
+                text-decoration: none;
+
+                & i {
+                    margin-right: 0.5em;
+                }
+            }
+
+            & .btn-finalizar {
+                background-color: #614BC3;
+                color: white;
+                border: none;
+            }
+
+            & .btn-finalizar:active {
+                background-color: #503ea1;
+                color:#F0EFED;
+            }
+
+            & .btn-regresar {
+                background-color: transparent;
+                color: #614BC3;
+                border: 1px solid #dddddd;
+            }
+
+            & .btn-regresar:active {
+                color:#2a2053;
+            }
+        }
+    }
+}
+
+.popup-star {
+    font-family: 'Baloo Chettan';
+    color: #787878;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+
+    & h1 {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    & p {
+        margin: 0;
+        font-size: 0.7rem;
+    }
+}
+
+.popup-mapa {
+    width: 50vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+        width: 90%;
+    }
+}
+
+.popup-cambio-responsable {
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & h1 {
+        color: #232323;
+        font-size: 0.8rem;
+        border-bottom: 1px solid #232323;
+
+        margin: 0.5em auto;
+    }
+
+    & input {
+        color: #232323;
+        font-size: 0.8rem;
+        margin: 0.5em 0 1em 0;
+        padding: 0.2em 0.2em;
+        border: none;
+        border-bottom: 1px solid #848484;
+        margin: 0.5em 1em;
+    }
+
+    & input:focus {
+        outline: none;
+    }
+
+    & input::placeholder {
+        color: #848484;
+    }
+
+    & button {
+        background-color: #614BC3;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-size: 0.8rem;
+        width: 70%;
+        align-self: center;
+        padding: 0.25em;
+        cursor: pointer;
+        margin-top: 0.7em;
+    }
+
+    & button:active {
+        background-color: #493891;
+    }
+}
+
+
+/*---------------------- PAGINA RESUMEN ------------------------------------------------------------*/
+
+.main-resumen {
+
+    & .categorias {
+
+        & a {
+            font-family: inherit;
+            font-size: 0.5rem;
+            color: white;
+            font-weight: lighter;
+            text-decoration: none;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
+
+    & h1 {
+        font-family: 'Baloo Chettan';
+        margin: 1em 1.5em;
+        font-size: 1rem;
+    }
+
+    & p {
+        margin: 0;
+    }
+
+    & .paneles {
+        /* margin: 0 1.5em; */
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        align-items: center;
+
+        & .contenedor-boleta {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+
+        & .panel {
+            min-width: 900px;
+            max-width: 1000px;
+            border-radius: 5px;
+        }
+
+        & .panel1 {
+            background-color: #614BC3;
+            color: white;
+            font-size: 0.7rem;
+            padding-bottom: 0.7em;
+
+            & .txt-confirmacion {
+                display: block;
+                font-family: 'Baloo Chettan';
+                margin: 0.5em 1em 0.2em 1em;
+            }
+
+            & .txt-envio-email {
+                margin: 0.3em 1em;
+
+                & button {
+                    font-size: 0.6rem;
+                    font-family: 'Baloo Chettan';
+                    font-weight: bold;
+                    border-radius: 5px;
+                    margin-left: 1em;
+                    padding: 0.2em 1em;
+                    background-color: #f0f0f0;
+                    border: none;
+                    cursor: pointer;
+                    box-shadow: 2px 2px 1px #232323;
+                }
+
+                & button:active {
+                    background-color: #d2d2d2;
+                }
+            }
+        }
+
+        & .panel2 {
+            height: auto;
+
+            & .comprobante-encabezado {
+                display: flex;
+                justify-content: space-between;
+
+                & .info-encabezado {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5em;
+                    justify-content: space-evenly;
+
+                    & .encabezado-titulo {
+                        font-size: 0.8rem;
+                        background-color: #614BC3;
+                        border-radius: 5px;
+                        color: white;
+                        padding: 0.5em 0 0.5em 1em;
+                        width: 565px;
+                    }
+
+                    & .tarjeta-pedido {
+                        align-self: center;
+                        width: 547px;
+                    }
+                }
+
+                & .codigo-barras {
+
+                    & img {
+                        width: 270px;
+                    }
+                }
+            }
+
+            & .tarjeta-pedido {
+                display: inline-block;
+                font-size: 0.7rem;
+                background-color: #f0f0f0;
+                margin: 0 auto 0 0;
+                padding: 0.2em 1em;
+                border-radius: 5px;
+
+                & .tarjeta-pedido-codigo {
+                    font-family: 'Baloo Chettan';
+                    font-weight: bold;
+                }
+            }
+
+            & .tarjetas {
+                display: flex;
+                gap: 1em;
+                justify-content: space-between;
+                margin-top: 0.5em;
+                font-size: 0.7rem;
+
+                & b {
+                    display: block;
+                    font-family: 'Baloo Chettan';
+                    margin: 0.5em 0.7em;
+                }
+
+                & p {
+                    font-size: 0.5rem;
+                    margin: 0.3em 1em;
+                    font-weight: bold;
+
+                    & span {
+                        font-weight: 100;
+                    }
+                }
+
+                & .bold {
+                    font-weight: bold;
+                }
+
+                & .no-bold {
+                    font-weight: 100;
+                }
+
+                & .tarjeta {
+                    width: 30%;
+                    border-radius: 5px;
+                    background-color: #f0f0f0;
+                    padding-bottom: 0.5em;
+                }
+
+                & .info-resumen {
+
+                    & p {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    & .tarjeta-total {
+                        border-top: 1px solid #787878;
+                        padding-top: 0.5em;
+                    }
+                }
+            }
+        }
+
+        & .panel3 {
+            font-size: 0.55rem;
+
+            & .info-pedido {
+                border: 1px solid transparent;
+                border-radius: 5px;
+                background-color: #614BC3;
+                color: white;
+                font-weight: bold;
+                font-family: 'Baloo Chettan';
+                padding-bottom: 0.7em;
+
+                & p {
+                    margin: 0 0.7em;
+
+                    & span {
+                        font-weight: 100;
+                    }
+                }
+
+                & p:nth-child(1) {
+                    margin: 0.5em 0.7em;
+                }
+            }
+
+            & .tabla-productos {
+                width: 100%;
+                border-collapse: separate;
+                border-spacing: 5px;
+                margin-top: 0.5em;
+
+                & th {
+                    background-color: #f0f0f0;
+                    width: 10%;
+                    border-radius: 5px;
+                    padding: 0.5em;
+                }
+
+                & .big-space {
+                    width: 20%;
+                }
+
+                & .fila-comision {
+                    background-color: #f0f0f0;
+
+                    & td {
+                        padding: 0.5em 0;
+                        border-radius: 5px;
+                    }
+                }
+
+                & tr {
+
+                    & .tabla-precio {
+                        color: #614BC3;
+                    }
+
+                    & .tabla-cantidad {
+
+                        & .cuadro-cantidad {
+                            background-color: #614BC3;
+                            color: white;
+                            border-radius: 5px;
+                            margin: 0 2em;
+                            padding: 0.2em 0;
+                        }
+                    }
+                }
+
+                & td {
+                    text-align: center;
+
+                    & img {
+                        width: 50px;
+                    }
+                }
+            }
+        }
+
+        & .btn-seguir-comprando {
+            text-decoration: none;
+            border: 1px solid red;
+            font-family: inherit;
+            font-size: 0.9rem;
+            color: #614BC3;
+            background-color: #fafafa;
+            margin-bottom: 5em;
+            margin-top: 1em;
+            border: 1px solid #d3d3d3;
+            border-radius: 5px;
+            padding: 0.2em 1em;
+            cursor: pointer;
+
+            & i {
+                margin: 0 0.3em;
+            }
+        }
+
+        & .btn-seguir-comprando:active {
+            color: #2a2053;
+        }
+    }
+
+}
+
+
+/*---------------------- PAGINA PERFIL ------------------------------------------------------------*/
+
+.main-perfil {
+
+    & .categorias {
+
+        & a {
+            font-family: inherit;
+            font-size: 0.5rem;
+            color: white;
+            font-weight: lighter;
+            text-decoration: none;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
+
+    & h1 {
+        font-family: 'Baloo Chettan';
+        margin: 1em 1.5em 0.2em 1.5em;
+        font-size: 2rem;
+    }
+
+    & h2 {
+        font-family: 'Baloo Chettan';
+        margin: 2em 3em 0.5em 3em;
+        font-size: 1rem;
+    }
+
+    & p {
+        margin: 0;
+    }
+
+    & .perfil-campos {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        border: 1px solid #eeeeee;
+        width: 1000px;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        padding: 1em;
+        border-radius: 5px;
+        align-items: center;
+
+        & .perfil-campo {
+            width: 300px;
+            font-family: 'Baloo Chettan';
+
+            & label {
+                padding: 0.2em 0.7em;
+                font-size: 0.8rem;
+                font-weight: bold;
+            }
+
+            & .perfil-input {
+                background-color: rgb(236, 236, 236);
+                padding: 0.2em 0.7em;
+                border-radius: 5px;
+                font-size: 0.8rem;
+            }
+
+            & .btn-editar-datos {
+                font-family: inherit;
+                font-size: 0.8rem;
+                display: block;
+                margin: 0 auto;
+                padding: 0.2em 1em;
+                border-radius: 5px;
+                border: none;
+                background-color: #614BC3;
+                color: white;
+                cursor: pointer;
+            }
+
+            & .btn-editar-datos:active {
+                background-color: #493891;
+            }
+
+            & .btn-editar-datos:focus {
+                outline: none;
+                box-shadow: 0 0 10px #614BC3;
+            }
+        }
+    }
+
+    & .tabla-pedidos-perfil {
+        border: 1px solid rgb(228, 228, 228);
+        font-size: 0.7rem;
+        margin: 0 auto 3em auto;
+        text-align: center;
+        border-spacing: 10px;
+        border-radius: 15px;
+        width: 90%;
+
+        & tr:nth-of-type(odd) {
+            background-color: white;
+
+            & a {
+                border: 1px solid #ececec;
+            }
+
+            & a:hover {
+                background-color: #ececec;
+            }
+        }
+
+        & tr:nth-of-type(even) {
+            background-color: rgb(236, 236, 236);
+
+            & a {
+                border: 1px solid rgb(216, 216, 216);
+            }
+
+            & a:hover {
+                background-color: rgb(216, 216, 216);
+            }
+        }
+
+        & th {
+            width: 10%;
+            background-color: #614BC3;
+            color: white;
+            font-family: 'Baloo Chettan';
+            border-radius: 5px;
+            border: none;
+        }
+
+        & a {
+            color: #232323;
+            text-decoration: none;
+
+            padding: 0.2em 0.5em;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 0.2em 0;
+
+            & i {
+                margin-right: 0.3em;
+                color: #614BC3;
+            }
+        }
+
+        & .txt-sinpedidos {
+            font-family: 'Baloo Chettan';
+            font-size: 1rem;
+            color: #9a9a9a;
+            font-weight: bold;
+        }
+    }
+}
+
+.popup-editar-datos {
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & h1 {
+        color: #232323;
+        font-size: 0.8rem;
+        border-bottom: 1px solid #232323;
+
+        margin: 0.5em auto;
+    }
+
+    & input {
+        color: #232323;
+        font-size: 0.8rem;
+        margin: 0.5em 0 1em 0;
+        padding: 0.2em 0.2em;
+        border: none;
+        border-bottom: 1px solid #848484;
+        margin: 0.5em 1em;
+    }
+
+    & input:focus {
+        outline: none;
+    }
+
+    & input::placeholder {
+        color: #848484;
+    }
+
+    & button {
+        background-color: #614BC3;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-size: 0.8rem;
+        width: 70%;
+        align-self: center;
+        padding: 0.25em;
+        cursor: pointer;
+        margin-top: 0.7em;
+    }
+
+    & button:active {
+        background-color: #493891;
+    }
+
+    & .password-editar-datos {
+        border: 1px solid rgb(224, 224, 224);
+        border-radius: 5px;
+        font-size: 0.6rem;
+        padding: 0.5em 1em;
+    }
+
+    & .password-editar-datos:focus {
+        outline: none;
+        box-shadow: 0 0 10px #614BC3;
+    }
+
+    & .password-fail {
+        margin: 0 0 0 1em;
+        font-size: 0.5rem;
+        color: red;
+    }
+
+    & .ad-editar-datos {
+        margin: 0.3em 0 0 0;
+        text-align: center;
+        font-size: 0.5rem;
+        color: #232323;
+    }
+
+    & .spot {
+        text-decoration: underline;
+        color: #614BC3;
+    }
+}
+
+
+/*---------------------- PAGINA DETALLE PEDIDO ------------------------------------------------------------*/
+
+.main-detalle-pedido {
+
+    & .categorias {
+
+        & a {
+            font-family: inherit;
+            font-size: 0.5rem;
+            color: white;
+            font-weight: lighter;
+            text-decoration: none;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
+
+    & h1 {
+        font-family: 'Baloo Chettan';
+        margin: 1em 1.5em 0.5em 1.5em;
+        font-size: 1.5rem;
+    }
+
+    & p {
+        margin: 0;
+    }
+
+    & .paneles {
+        /* margin: 0 1.5em; */
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        align-items: center;
+
+        & .panel {
+            min-width: 900px;
+            max-width: 1000px;
+            border-radius: 5px;
+        }
+
+        & .panel1 {
+            /* height: auto; */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1em;
+
+            & .info {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5em;;
+
+                & .comprobante-titulo {
+                    font-size: 0.7rem;
+                    background-color: #614BC3;
+                    border-radius: 5px;
+                    color: white;
+                    padding: 0.3em 1em;
+                }
+
+                & .tarjeta-pedido {
+                    display: inline-block;
+                    font-size: 0.7rem;
+                    background-color: #f0f0f0;
+                    /* margin: 0 auto 0 0; */
+                    padding: 0.2em 1em;
+                    border-radius: 5px;
+
+                    & .bold {
+                        font-family: 'Baloo Chettan';
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            & .codigo-barras {
+                margin-left: 0.2em;
+
+            }
+        }
+
+        & .panel2 {
+            font-size: 0.55rem;
+
+            & .info-pedido {
+                border: 1px solid transparent;
+                border-radius: 5px;
+                background-color: #614BC3;
+                color: white;
+                font-weight: bold;
+                font-family: 'Baloo Chettan';
+                padding-bottom: 0.7em;
+
+                & p {
+                    margin: 0 0.7em;
+
+                    & span {
+                        font-weight: 100;
+                    }
+                }
+
+                & p:nth-child(1) {
+                    margin: 0.5em 0.7em 0 0.7em;
+                }
+            }
+
+            & .tabla-productos {
+                width: 100%;
+                border-collapse: separate;
+                border-spacing: 5px;
+                margin-top: 0.5em;
+
+                & th {
+                    background-color: #f0f0f0;
+                    width: 10%;
+                    border-radius: 5px;
+                    padding: 0.5em;
+                }
+
+                & .big-space {
+                    width: 20%;
+                }
+
+                & .fila-comision {
+                    background-color: #f0f0f0;
+
+                    & td {
+                        padding: 0.5em 0;
+                        border-radius: 5px;
+                    }
+                }
+
+                & tr {
+
+                    & .tabla-precio {
+                        color: #614BC3;
+                    }
+
+                    & .tabla-cantidad {
+
+                        & .cuadro-cantidad {
+                            background-color: #614BC3;
+                            color: white;
+                            border-radius: 5px;
+                            margin: 0 2em;
+                            padding: 0.2em 0;
+                        }
+                    }
+                }
+
+                & td {
+                    text-align: center;
+
+                    & img {
+                        width: 50px;
+                    }
+
+
+                }
+            }
+        }
+
+
+    }
+
+    & .btn-descargar-comprobante {
+        display: block;
+        font-family: 'Baloo Chettan';
+        font-size: 0.7em;
+        margin: 1em auto;
+
+        padding: 0.2em 1em;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        background-color: #614BC3;
+        box-shadow: 3px 3px 1px #232323;
+        cursor: pointer;
+    }
+
+    & .btn-descargar-comprobante:active {
+        background-color: #503ea1;
+    }
+
+    & .btn-volver-perfil {
+
+        font-family: inherit;
+        font-size: 0.9rem;
+        color: #614BC3;
+        background-color: #fafafa;
+
+        /*margin-bottom: 5em;
+        margin-top: 0.5em;*/
+        border: 1px solid #d3d3d3;
+        border-radius: 5px;
+        padding: 0.2em 1em;
+        cursor: pointer;
+        text-decoration: none;
+        display: block;
+        width: 250px;
+        margin: 1.5em auto;
+        margin-bottom: 5em;
+
+        & i {
+            margin: 0 0.3em;
+        }
+    }
+
+    & .btn-volver-perfil:active {
+        color: #2a2053;
+    }
+}
+
+
+.footer {
+    background-color: #232323;
+    height: 70px;
+    margin: auto 0 0 0;
+    color: white;
+    font-family: 'Average Sans';
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 0.6rem;
+
+    & p {
+        margin: 0;
+    }
+
+    & .estilo {
+        font-family: 'Baloo Chettan';
+        font-weight: bold;
+    }
+}
+
+.hidden {
+    display: none;
+}

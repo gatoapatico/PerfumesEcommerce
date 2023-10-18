@@ -1,0 +1,13 @@
+Entity\CarritoItem.class
+Entity\Carrito.class
+com\utp\bodegajavaweb\resources\JavaEE8Resource.class
+Model\UsuarioModel.class
+Controller\ProductoController.class
+com\utp\bodegajavaweb\JAXRSConfiguration.class
+Controller\AdminController.class
+Model\ProductoModel.class
+Controller\CarritoController.class
+Entity\Usuario.class
+Config\db.class
+Entity\Producto.class
+Controller\UsuarioController.class
