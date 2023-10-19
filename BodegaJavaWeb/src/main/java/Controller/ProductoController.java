@@ -122,7 +122,6 @@ public class ProductoController extends HttpServlet {
                             if (!item.isFormField()) {
                                 if (model.agregarProducto(nombre, categoria, imagen,
                                         descripcion, proveedor, precio, stock)) {
-                                    request.setAttribute("Éxito", "Éxito");
                                     request.getRequestDispatcher("admin/admin_productos.jsp").forward(request, response);
                                 } else {
                                     request.getRequestDispatcher("admin/admin_productos_agregar.jsp").forward(request, response);

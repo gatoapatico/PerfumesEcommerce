@@ -53,9 +53,8 @@ public class ImgController extends HttpServlet {
             
         int id = Integer.parseInt(request.getParameter("id"));
         prod.listarImg(id, response);
-        System.out.println("MOSTRANDO IMAGEN");
         } catch (Exception e) {
-            System.out.println("ERORRRRRRR  " + e);
+            System.out.println(e);
         }
     }
 

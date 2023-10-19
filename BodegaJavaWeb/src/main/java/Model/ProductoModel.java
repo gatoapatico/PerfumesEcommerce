@@ -35,7 +35,7 @@ public class ProductoModel {
                 producto.setId(resultSet.getInt("id"));
                 producto.setNombre(resultSet.getString("nombre"));
                 producto.setCategoria(resultSet.getString("categoria"));
-                producto.setImagen(resultSet.getString("imagen"));
+                producto.setImagen(resultSet.getBytes("imagen"));
                 producto.setDescripcion(resultSet.getString("descripcion"));
                 producto.setProveedor(resultSet.getString("proveedor"));
                 producto.setPrecio(resultSet.getDouble("precio"));
@@ -59,7 +59,7 @@ public class ProductoModel {
                 producto.setId(resultSet.getInt("id"));
                 producto.setNombre(resultSet.getString("nombre"));
                 producto.setCategoria(resultSet.getString("categoria"));
-                producto.setImagen(resultSet.getString("imagen"));
+                producto.setImagen(resultSet.getBytes("imagen"));
                 producto.setDescripcion(resultSet.getString("descripcion"));
                 producto.setProveedor(resultSet.getString("proveedor"));
                 producto.setPrecio(resultSet.getDouble("precio"));
@@ -108,7 +108,10 @@ public class ProductoModel {
             statement.setDouble(6, precio);
             statement.setInt(7, stock);
             statement.setInt(8, id);
+            System.out.println(imagen);
+            System.out.println(nombre);
             return statement.executeUpdate() > 0;
+            
         } catch (SQLException e) {
             e.printStackTrace();
             return false;

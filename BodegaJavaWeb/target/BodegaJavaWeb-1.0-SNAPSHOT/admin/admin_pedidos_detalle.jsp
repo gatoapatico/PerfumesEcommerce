@@ -162,7 +162,7 @@
                                     <% Producto producto = cProducto.obtenerProducto(detalle.getProductoId()); %>
                                         <tr>
                                             <td>
-                                                <img width="50" src="/BodegaJavaWeb/assets/img/productos/<%=producto.getImagen()%>" alt="<%=producto.getDescripcion()%>">
+                                                <img width="50" src="/BodegaJavaWeb/ImgController?id=<%=producto.getId()%>" alt="<%=producto.getDescripcion()%>">
                                             </td>
                                             <td><%=producto.getDescripcion()%></td>
                                             <td>S/ <%=String.format("%.2f", detalle.getPrecio())%></td>

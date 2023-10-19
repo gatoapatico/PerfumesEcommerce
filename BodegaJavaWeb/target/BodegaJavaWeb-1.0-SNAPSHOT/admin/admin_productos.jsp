@@ -56,7 +56,7 @@
                                     <td><%=producto.getNombre()%></td>
                                     <td><%=producto.getCategoria()%></td>
                                     <td>
-                                        <img width="50" src="ImgController?id=<%=producto.getId()%>" alt="<%=producto.getDescripcion()%>">
+                                        <img width="50" src="/BodegaJavaWeb/ImgController?id=<%=producto.getId()%>" alt="<%=producto.getDescripcion()%>">
                                     </td>
                                     <td><%=producto.getDescripcion()%></td>
                                     <td><%=producto.getProveedor()%></td>
