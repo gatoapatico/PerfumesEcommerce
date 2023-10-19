@@ -90,14 +90,14 @@
 
         <!-- SLIDER -->
 
-        <header class="head">
+        <header class="hidden">
             <h1 class="top">Top Hottest Product</h1>
             <p>
                 <span>&#139;</span>
                 <span>&#155;</span>
             </p>
         </header>
-        <section class="slider">
+        <section class="hidden">
             <div class="product">
 
 
@@ -297,14 +297,6 @@
         </section>
 
 
-        <!-- IMAGEN ESTATICA -->
-        <div id="carouselExampleFade" class="carousel slide carousel-fade go-z-back" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="assets/img/perfumes/estatic.png" alt="First slide">
-                </div>
-            </div>
-        </div>
 
 
         <footer>

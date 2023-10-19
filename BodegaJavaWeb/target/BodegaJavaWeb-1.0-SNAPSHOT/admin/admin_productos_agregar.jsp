@@ -50,7 +50,7 @@
                                                class="form-control border-secondary-subtle" id="txtDescProd">
                                     </div>
                                     <div class="mb-3 me-4">
-                                        <label for="txtCateProd" class="form-label">Categoría del Producto:</label>
+                                        <label for="txtCateProd" class="form-label">Marca del Producto:</label>
                                         <select class="form-select" aria-label="Default select example" id="txtCateProd"
                                                 name="producto-categoria">
                                             <option selected value="esika">esika</option>

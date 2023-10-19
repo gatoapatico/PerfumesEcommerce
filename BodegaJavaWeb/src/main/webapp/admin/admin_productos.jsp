@@ -40,7 +40,7 @@
                             <tr>
                                 <th scope="col">ID</th>
                                 <th scope="col">Nombre</th>
-                                <th scope="col">Categoria</th>
+                                <th scope="col">Marca</th>
                                 <th scope="col">Imagen</th>
                                 <th scope="col">Descripcion</th>
                                 <th scope="col">Proveedor</th>

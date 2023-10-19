@@ -88,7 +88,7 @@
                                 </div>
                                 <div class="mb-3 me-4">
                                     <label for="txtMetodoEnvio" class="form-label">Metodo de Envio:</label>
-                                    <input type="text" id="txtMetodoEnvio" disabled value="<%=(pedido.getMetodoEnvio() == 1) ? "Recojo en bodega MARISOL" : "Entrega a domicilio"%>" class="form-control" >
+                                    <input type="text" id="txtMetodoEnvio" disabled value="<%=(pedido.getMetodoEnvio() == 1) ? "Recojo en Tienda Perfumes" : "Entrega a domicilio"%>" class="form-control" >
                                 </div>
                                 <div class="mb-3 me-4">
                                     <label for="txtDireccion" class="form-label">Dirección de Entrega:</label>

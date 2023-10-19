@@ -64,7 +64,7 @@
                                 </div>
                             </div>
                             <div class="mb-3 row">
-                                <label for="txtCateProd" class="col-sm-2 col-form-label">Categoría</label>
+                                <label for="txtCateProd" class="col-sm-2 col-form-label">Marca</label>
                                 <div class="col-sm-10">
                                     <select class="form-select" aria-label="Default select example" id="txtCateProd" name="producto-categoria">
                                         <%

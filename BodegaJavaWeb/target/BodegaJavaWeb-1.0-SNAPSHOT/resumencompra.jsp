@@ -70,10 +70,10 @@
                     <div class="panel panel3">
                         <div class="info-pedido">
                             <p>PEDIDO: <span><%=pedido.getCodigoUnico()%></span></p>
-                            <p>MÃTODO DE ENTREGA: <span><%=(pedido.getMetodoEnvio() == 1) ? "Retiro en tienda PERFUME" : "Entrega a domicilio"%></span></p>
+                            <p>MÉTODO DE ENTREGA: <span><%=(pedido.getMetodoEnvio() == 1) ? "Retiro en tienda PERFUME" : "Entrega a domicilio"%></span></p>
                             <p>FECHA: <span><%=DateFormats.formatoFechaDiaTexto(pedido.getFechaEntrega())%></span></p>
                             <p>HORA: <span><%="Entre las " + DateFormats.formatoHora(pedido.getHoraEntrega()) + " y las " + DateFormats.sumarHora(pedido.getHoraEntrega())%></span></p>
-                            <p>DIRECCIÃN: <span><%=pedido.getDireccionEntrega()%></span></p>
+                            <p>DIRECCIÓN: <span><%=pedido.getDireccionEntrega()%></span></p>
                         </div>
                         <table class="tabla-productos">
                             <thead>
