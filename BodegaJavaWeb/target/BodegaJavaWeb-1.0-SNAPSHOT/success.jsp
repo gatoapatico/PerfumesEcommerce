@@ -15,7 +15,8 @@
         <div class="popup popup-star" id="popup-star">
             <img src="assets/img/pedido/Star.png" alt="star">
             <h1>¡Muchas gracias!</h1>
-            <p>tu pedido está siendo procesado</p>
+            <p>tu pedido está siendo procesado</p> 
+            <p> "Click" en la pantalla para continuar</p>
         </div>
 
 <%@include file="_footer.jsp" %>

@@ -98,7 +98,7 @@
                                 <% for(DetallePedido detalle : detallesPedido) {%>
                                     <% Producto producto = cProducto.obtenerProducto(detalle.getProductoId()); %>
                                     <tr>
-                                        <td><img src="assets/img/productos/<%=producto.getImagen()%>" alt="<%=producto.getDescripcion()%>"></td>
+                                        <td><img src="ImgController?id=<%=producto.getId()%>" alt="<%=producto.getDescripcion()%>"></td>
                                         <td><%=producto.getNombre()%></td>
                                         <td class="tabla-precio">S/ <%=String.format("%.2f", detalle.getPrecio())%></td>
                                         <td class="tabla-cantidad"><div class="cuadro-cantidad"><%=detalle.getCantidad()%></div></td>

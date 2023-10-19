@@ -43,7 +43,7 @@
                             <% precioTotal += currentSubtotal; %>
                             <div class="producto">
                                 <div class="imagen">
-                                    <img src="assets/img/productos/<%=producto.getImagen()%>" alt="<%=producto.getDescripcion()%>">
+                                    <img src="ImgController?id=<%=producto.getId()%>" alt="<%=producto.getDescripcion()%>">
                                 </div>
                                 <div class="info">
                                     <p class="nombre"><%=producto.getNombre()%></p>

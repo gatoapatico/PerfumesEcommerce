@@ -2,12 +2,17 @@ package Model;
 
 import Config.db;
 import Entity.Producto;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.servlet.http.HttpServletResponse;
 
 public class ProductoModel {
 
@@ -68,7 +73,7 @@ public class ProductoModel {
     }
 
     public boolean agregarProducto(String nombre, String categoria, String rutaImagen, String descripcion,
-                                   String proveedor, double precio, int stock) {
+            String proveedor, double precio, int stock) {
 
         String sql = "INSERT INTO productos VALUES(null, ?, ?, ?, ?, ?, ?, ?)";
         try {
@@ -81,18 +86,17 @@ public class ProductoModel {
             statement.setDouble(6, precio);
             statement.setInt(7, stock);
             return statement.executeUpdate() > 0;
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             return false;
         }
     }
 
     public boolean editarProducto(int id, String nombre, String categoria, String imagen,
-                                  String descripcion, String proveedor, double precio, int stock) {
+            String descripcion, String proveedor, double precio, int stock) {
 
-        String sql = "UPDATE productos SET nombre = ?, categoria = ?, imagen = ?, descripcion = ?," +
-                "proveedor = ?, precio = ?, stock = ? WHERE id = ?";
+        String sql = "UPDATE productos SET nombre = ?, categoria = ?, imagen = ?, descripcion = ?,"
+                + "proveedor = ?, precio = ?, stock = ? WHERE id = ?";
 
         try {
             PreparedStatement statement = connection.prepareStatement(sql);
@@ -105,8 +109,7 @@ public class ProductoModel {
             statement.setInt(7, stock);
             statement.setInt(8, id);
             return statement.executeUpdate() > 0;
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             return false;
         }
@@ -118,10 +121,29 @@ public class ProductoModel {
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setInt(1, id);
             return statement.executeUpdate() > 0;
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             return false;
+        }
+    }
+
+    public void listarImg(int id, HttpServletResponse response) {
+        String sql = "SELECT * FROM productos WHERE id = ?";
+
+        try (PreparedStatement ps = connection.prepareStatement(sql)) {
+            ps.setInt(1, id);
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    try (InputStream inputStream = rs.getBinaryStream("Foto"); BufferedInputStream bufferedInputStream = new BufferedInputStream(inputStream); OutputStream outputStream = response.getOutputStream(); BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(outputStream)) {
+                        int i;
+                        while ((i = bufferedInputStream.read()) != -1) {
+                            bufferedOutputStream.write(i);
+                        }
+                    }
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
