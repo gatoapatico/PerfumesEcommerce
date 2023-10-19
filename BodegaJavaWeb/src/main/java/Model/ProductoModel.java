@@ -72,7 +72,7 @@ public class ProductoModel {
         return null;
     }
 
-    public boolean agregarProducto(String nombre, String categoria, String rutaImagen, String descripcion,
+    public boolean agregarProducto(String nombre, String categoria, byte[] imagen, String descripcion,
             String proveedor, double precio, int stock) {
 
         String sql = "INSERT INTO productos VALUES(null, ?, ?, ?, ?, ?, ?, ?)";
@@ -80,7 +80,7 @@ public class ProductoModel {
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setString(1, nombre);
             statement.setString(2, categoria);
-            statement.setString(3, rutaImagen);
+            statement.setBytes(3, imagen);
             statement.setString(4, descripcion);
             statement.setString(5, proveedor);
             statement.setDouble(6, precio);
@@ -92,7 +92,7 @@ public class ProductoModel {
         }
     }
 
-    public boolean editarProducto(int id, String nombre, String categoria, String imagen,
+    public boolean editarProducto(int id, String nombre, String categoria, byte[] imagen,
             String descripcion, String proveedor, double precio, int stock) {
 
         String sql = "UPDATE productos SET nombre = ?, categoria = ?, imagen = ?, descripcion = ?,"
@@ -102,7 +102,7 @@ public class ProductoModel {
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setString(1, nombre);
             statement.setString(2, categoria);
-            statement.setString(3, imagen);
+            statement.setBytes(3, imagen);
             statement.setString(4, descripcion);
             statement.setString(5, proveedor);
             statement.setDouble(6, precio);
@@ -128,13 +128,13 @@ public class ProductoModel {
     }
 
     public void listarImg(int id, HttpServletResponse response) {
-        String sql = "SELECT * FROM productos WHERE id = ?";
+        String sql = "SELECT imagen FROM productos WHERE id = ?";
 
         try (PreparedStatement ps = connection.prepareStatement(sql)) {
             ps.setInt(1, id);
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
-                    try (InputStream inputStream = rs.getBinaryStream("Foto"); BufferedInputStream bufferedInputStream = new BufferedInputStream(inputStream); OutputStream outputStream = response.getOutputStream(); BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(outputStream)) {
+                    try (InputStream inputStream = rs.getBinaryStream(1); BufferedInputStream bufferedInputStream = new BufferedInputStream(inputStream); OutputStream outputStream = response.getOutputStream(); BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(outputStream)) {
                         int i;
                         while ((i = bufferedInputStream.read()) != -1) {
                             bufferedOutputStream.write(i);

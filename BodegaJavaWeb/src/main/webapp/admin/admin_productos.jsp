@@ -56,7 +56,7 @@
                                     <td><%=producto.getNombre()%></td>
                                     <td><%=producto.getCategoria()%></td>
                                     <td>
-                                        <img width="50" src="/BodegaJavaWeb/assets/img/productos/<%=producto.getImagen()%>" alt="<%=producto.getDescripcion()%>">
+                                        <img width="50" src="ImgController?id=<%=producto.getId()%>" alt="<%=producto.getDescripcion()%>">
                                     </td>
                                     <td><%=producto.getDescripcion()%></td>
                                     <td><%=producto.getProveedor()%></td>
@@ -90,7 +90,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            <a href="/BodegaJavaWeb/ProductoController?action=delete&productoid=<%=producto.getId()%>&imagenruta=<%=producto.getImagen()%>" type="button" class="btn btn-danger">Eliminar producto</a>
+                            <a href="/BodegaJavaWeb/ProductoController?action=delete&productoid=<%=producto.getId()%>" type="button" class="btn btn-danger">Eliminar producto</a>
                         </div>
                     </div>
                 </div>

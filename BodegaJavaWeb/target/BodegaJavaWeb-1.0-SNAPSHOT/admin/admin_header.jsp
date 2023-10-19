@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
     <div class="container-md">
         <a class="navbar-brand" href="/BodegaJavaWeb/admin/admin_home.jsp">
-            <img src="/BodegaJavaWeb/assets/img/Marisol_Logo.png" alt="Logo" width="200"
-                 class="d-inline-block align-text-top" style="background:white; padding: 1px; filter: invert(100%); background-color: transparent;">
+            <img src="/BodegaJavaWeb/assets/img/perfumes/perfume-logo.png" alt="Logo" width="200"
+                 class="d-inline-block align-text-top" style=" padding: 1px;  width: 100px; ">
         </a>
         <span style="color: white; font-size: 1.5rem;">| Modo Administrador</span>>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"

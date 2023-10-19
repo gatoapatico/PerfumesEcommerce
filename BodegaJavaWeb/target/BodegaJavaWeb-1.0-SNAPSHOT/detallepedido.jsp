@@ -25,21 +25,12 @@
     <body>
         <%@include file="_header.jsp" %>
         <main class="main-detalle-pedido">
-            <nav class="categorias">
-                <a href="">CARNES, AVES Y PESCADOS</a>
-                <a href="">CONGELADOS</a>
-                <a href="">LACTEOS</a>
-                <a href="">FRUTAS Y VERDURAS</a>
-                <a href="">PANADERIA Y PASTELERIA</a>
-                <a href="">BEBIDAS</a>
-                <a href="">CUIDADO PERSONAL</a>
-                <a href="">LIMPIEZA</a>
-            </nav>
+            <%@include file="_nav.jsp" %>
             <h1>DETALLE PEDIDO</h1>
             <div class="paneles" id="paneles">
                 <div class="panel panel1">
                     <div class="info">
-                        <p class="comprobante-titulo">BODEGA MARISOL - COMPROBANTE DE PAGO</p>
+                        <p class="comprobante-titulo">TIENDA PERFUME - COMPROBANTE DE PAGO</p>
                         <p class="tarjeta-pedido">Código de pedido: <span class="bold" id="comprobante-codigo-unico"><%=pedido.getCodigoUnico()%></span></p>
                         <p class="tarjeta-pedido">Medio de Pago: <span class="bold">Visa</span></p>
                         <p class="tarjeta-pedido">Pago total: <span>S/ <span class="bold"><%=String.format("%.2f", pedido.getTotalPago())%></span></span></p>
@@ -50,7 +41,7 @@
                 </div>
                 <div class="panel panel2">
                     <div class="info-pedido">
-                        <p>MÉTODO DE ENTREGA: <span><%=(pedido.getMetodoEnvio() == 1) ? "Retiro en bodega MARISOL" : "Entrega a domicilio"%></span></p>
+                        <p>MÉTODO DE ENTREGA: <span><%=(pedido.getMetodoEnvio() == 1) ? "Retiro en Tienda PERFUME" : "Entrega a domicilio"%></span></p>
                         <p>FECHA: <span><%=DateFormats.formatoFechaDiaTexto(pedido.getFechaEntrega())%></span></p>
                         <p>HORA: <span><%="Entre las " + DateFormats.formatoHora(pedido.getHoraEntrega()) + " y las " + DateFormats.sumarHora(pedido.getHoraEntrega())%></span></p>
                         <p>DIRECCIÓN: <span><%=pedido.getDireccionEntrega()%></span></p>
@@ -69,7 +60,7 @@
                             <% for(DetallePedido detalle : detallesPedido) {%>
                                 <% Producto producto = cProducto.obtenerProducto(detalle.getProductoId()); %>
                                 <tr>
-                                    <td><img src="assets/img/productos/<%=producto.getImagen()%>" alt="<%=producto.getDescripcion()%>"></td>
+                                    <td><img src="ImgController?id=<%=producto.getId()%>" alt="<%=producto.getDescripcion()%>"></td>
                                     <td><%=producto.getNombre()%></td>
                                     <td class="tabla-precio">S/ <%=String.format("%.2f", detalle.getPrecio())%></td>
                                     <td class="tabla-cantidad"><div class="cuadro-cantidad"><%=detalle.getCantidad()%></div></td>

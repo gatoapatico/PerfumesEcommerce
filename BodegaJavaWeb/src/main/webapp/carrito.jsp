@@ -22,16 +22,8 @@
     <body>
         <%@include file="_header.jsp" %>
         <main class="main-carrito">
-            <nav class="categorias">
-                <a href="ProductoController">CARNES, AVES Y PESCADOS</a>
-                <a href="ProductoController">CONGELADOS</a>
-                <a href="ProductoController">LACTEOS</a>
-                <a href="ProductoController">FRUTAS Y VERDURAS</a>
-                <a href="ProductoController">PANADERIA Y PASTELERIA</a>
-                <a href="ProductoController">BEBIDAS</a>
-                <a href="ProductoController">CUIDADO PERSONAL</a>
-                <a href="ProductoController">LIMPIEZA</a>
-            </nav>
+            <%@include file="_nav.jsp" %>
+            
             <h1>TU CARRITO</h1>
             <div class="paneles">
                 <div class="productos">

@@ -22,16 +22,7 @@
     <body>
         <%@include file="_header.jsp" %>
         <main class="main-pedido" id="main-pedido">
-            <nav class="categorias">
-                <a href="">CARNES, AVES Y PESCADOS</a>
-                <a href="">CONGELADOS</a>
-                <a href="">LACTEOS</a>
-                <a href="">FRUTAS Y VERDURAS</a>
-                <a href="">PANADERIA Y PASTELERIA</a>
-                <a href="">BEBIDAS</a>
-                <a href="">CUIDADO PERSONAL</a>
-                <a href="">LIMPIEZA</a>
-            </nav>
+            <%@include file="_nav.jsp" %>
             <h1>PROCESO DE PEDIDO</h1>
             <form action="PedidoController" method="POST">
                 <input hidden="hidden" type="text" name="action" value="realizar-pedido">
@@ -116,7 +107,7 @@
                                     <div class="contenido-domicilio hidden" id="contenido-domicilio">
                                         <p>
                                             Los despachos a domicilio solo son válidos para direcciones que
-                                            se encuentran en la misma urbanización de la bodega MARISOL
+                                            se encuentran en la misma urbanización de la tienda PERFUME
                                         </p>
                                         <div class="dato-input whole">
                                             <label for="direccion-domicilio">Ingresar dirección de entrega a domicilio*</label>
@@ -128,7 +119,7 @@
                                         <div class="direccion">
                                             <i class="bi bi-geo-alt-fill"></i>
                                             <div class="info">
-                                                <p class="titulo">bodega MARISOL</p>
+                                                <p class="titulo">tienda PERFUME</p>
                                                 <p>Calle García Rada 341</p>
                                                 <p>Lima</p>
                                                 <p>Lima, Lima</p>
@@ -174,7 +165,7 @@
                             </div>
                             <div class="contenido2 hidden">
                                 <p class="modalidad" id="modalidad-resumen">RECOGER EN LA TIENDA</p>
-                                <p class="direccion" id="direccion-resumen">bodega MARISOL</p>
+                                <p class="direccion" id="direccion-resumen">tienda PERFUME</p>
                                 <p class="subtitulo">Programado</p>
                                 <p class="fecha"><span id="fecha-dia-resumen">Lunes, 4 de septiembre del 2023</span>, <span id="fecha-hora-resumen">de 19:00 y 20:00</span></p>
                                 <button type="button" class="btn-cambiar" data-cambiarenvio="canbiarenvio">Cambiar opciones de entrega</button>
@@ -339,7 +330,7 @@
             <p>tu pedido está siendo procesado</p>
         </div>
         <div class="popup popup-mapa hidden" id="popup-mapa">
-            <img src="assets/img/pedido/mapa.png" alt="mapa-marisol">
+            <img src="assets/img/pedido/mapa.png" alt="mapa">
         </div>
         <div class="popup popup-cambio-responsable hidden" id="popup-cambio-responsable">
             <h1>Cambio de responsable de recojo</h1>

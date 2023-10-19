@@ -267,7 +267,7 @@ document.addEventListener('click', function(e){
                     break;
                 case 'metodo-tienda':
                     document.getElementById('modalidad-resumen').textContent = 'RECOJO EN TIENDA'
-                    document.getElementById('direccion-resumen').textContent = 'bodega MARISOL - Calle García Rada 341';
+                    document.getElementById('direccion-resumen').textContent = 'tienda PERFUME - Calle García Rada 341';
                     contadorCampos++;
                     break;
             }
@@ -390,7 +390,7 @@ document.addEventListener('click', function(e){
             var doc = new jspdf();
             //doc.addImage(img,'PNG',-63,15,335,210);
             doc.addImage(img,'PNG',19,13,175,145);
-            doc.save(`marisolComprobante_${document.getElementById('comprobante-codigo-unico').textContent}.pdf`);
+            doc.save(`perfumeComprobante_${document.getElementById('comprobante-codigo-unico').textContent}.pdf`);
         });
     }
     else if(e.target.dataset.crearpdfdetalle) {
@@ -399,7 +399,7 @@ document.addEventListener('click', function(e){
             var doc = new jspdf();
             //doc.addImage(img,'PNG',-63,15,335,210);
             doc.addImage(img,'PNG',-32,13,275,115);
-            doc.save(`marisolComprobante_${document.getElementById('comprobante-codigo-unico').textContent}.pdf`);
+            doc.save(`perfumeComprobante_${document.getElementById('comprobante-codigo-unico').textContent}.pdf`);
         });
     }
 });

@@ -19,16 +19,7 @@
     <body>
         <%@include file="_header.jsp" %>
         <main class="main-perfil">
-            <nav class="categorias">
-                <a href="">CARNES, AVES Y PESCADOS</a>
-                <a href="">CONGELADOS</a>
-                <a href="">LACTEOS</a>
-                <a href="">FRUTAS Y VERDURAS</a>
-                <a href="">PANADERIA Y PASTELERIA</a>
-                <a href="">BEBIDAS</a>
-                <a href="">CUIDADO PERSONAL</a>
-                <a href="">LIMPIEZA</a>
-            </nav>
+            <%@include file="_nav.jsp" %>
             <h1>Mi Perfil</h1>
             <div class="perfil-campos">
                 <div class="perfil-campo">

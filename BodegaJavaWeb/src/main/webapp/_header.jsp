@@ -5,7 +5,7 @@
 <header>
     <div class="header-left">
         <div class="logo-contenedor">
-            <a href="index.jsp" id="logo-header"><img src="assets/img/perfumes/perfume-logo.png" alt="logo Marisol"></a>
+            <a href="index.jsp" id="logo-header"><img src="assets/img/perfumes/perfume-logo.png" alt="logo"></a>
         </div>
         <a href="ProductoController?action=load" id="productos-header">Productos<i class="bi bi-caret-down-fill"></i></a>
         <% if(usuario != null) {%>

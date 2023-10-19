@@ -25,16 +25,7 @@
     <body>
         <%@include file="_header.jsp" %>
         <main class="main-resumen">
-            <nav class="categorias">
-                <a href="">CARNES, AVES Y PESCADOS</a>
-                <a href="">CONGELADOS</a>
-                <a href="">LACTEOS</a>
-                <a href="">FRUTAS Y VERDURAS</a>
-                <a href="">PANADERIA Y PASTELERIA</a>
-                <a href="">BEBIDAS</a>
-                <a href="">CUIDADO PERSONAL</a>
-                <a href="">LIMPIEZA</a>
-            </nav>
+            <%@include file="_nav.jsp" %>
             <h1>PEDIDO CONFIRMADO</h1>
             <div class="paneles" id="paneles">
                 <div class="panel panel1">
@@ -45,7 +36,7 @@
                     <div class="panel panel2">
                         <div class="comprobante-encabezado">
                             <div class="info-encabezado">
-                                <p class="encabezado-titulo">BODEGA MARISOL - COMPROBANTE DE PAGO</p>
+                                <p class="encabezado-titulo">TIENDA PERFUME - COMPROBANTE DE PAGO</p>
                                 <p class="tarjeta-pedido">Pedido Confirmado: <span class="tarjeta-pedido-codigo" id="comprobante-codigo-unico"><%=pedido.getCodigoUnico()%></span> | <span class="tarjeta-pedido-fecha"><%=DateFormats.formatoFechaTexto(pedido.getFecha())%></span></p>
                             </div>
                             <div class="codigo-barras">
@@ -79,7 +70,7 @@
                     <div class="panel panel3">
                         <div class="info-pedido">
                             <p>PEDIDO: <span><%=pedido.getCodigoUnico()%></span></p>
-                            <p>MÉTODO DE ENTREGA: <span><%=(pedido.getMetodoEnvio() == 1) ? "Retiro en bodega MARISOL" : "Entrega a domicilio"%></span></p>
+                            <p>MÉTODO DE ENTREGA: <span><%=(pedido.getMetodoEnvio() == 1) ? "Retiro en tienda PERFUME" : "Entrega a domicilio"%></span></p>
                             <p>FECHA: <span><%=DateFormats.formatoFechaDiaTexto(pedido.getFechaEntrega())%></span></p>
                             <p>HORA: <span><%="Entre las " + DateFormats.formatoHora(pedido.getHoraEntrega()) + " y las " + DateFormats.sumarHora(pedido.getHoraEntrega())%></span></p>
                             <p>DIRECCIÓN: <span><%=pedido.getDireccionEntrega()%></span></p>

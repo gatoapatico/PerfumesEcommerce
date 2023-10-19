@@ -1,4 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <html>
     <head>
         <meta charset="utf-8">
@@ -34,11 +37,13 @@
                                         <input type="text" name="producto-nombre" required
                                                class="form-control border-secondary-subtle" id="txtNameProd">
                                     </div>
+
                                     <div class="mb-3 me-4">
                                         <label for="txtImgProd" class="form-label">Imagen del Producto:</label>
-                                        <input type="file" name="producto-imagenFile"
-                                               class="form-control border-secondary-subtle" id="txtImgProd" accept=".png, .jpg, image/png, image/jpeg">
+                                        <input type="file" name="producto-imagen"
+                                               class="form-control border-secondary-subtle" accept=".png, .jpg, image/png, image/jpeg, .webp">
                                     </div>
+
                                     <div class="mb-3 me-4">
                                         <label for="txtDescProd" class="form-label">Descripción del Producto:</label>
                                         <input type="text" name="producto-descripcion" required
@@ -48,14 +53,9 @@
                                         <label for="txtCateProd" class="form-label">Categoría del Producto:</label>
                                         <select class="form-select" aria-label="Default select example" id="txtCateProd"
                                                 name="producto-categoria">
-                                            <option selected value="CARNES, AVES Y PESCADOS">CARNES, AVES Y PESCADOS</option>
-                                            <option value="CONGELADOS">CONGELADOS</option>
-                                            <option value="BEBIDAS">BEBIDAS</option>
-                                            <option value="CUIDADO PERSONAL">CUIDADO PERSONAL</option>
-                                            <option value="FRUTAS Y VERDURAS">FRUTAS Y VERDURAS</option>
-                                            <option value="LACTEOS">LACTEOS</option>
-                                            <option value="LIMPIEZA">LIMPIEZA</option>
-                                            <option value="PANADERIA Y PASTELERIA">PANADERIA Y PASTELERIA</option>
+                                            <option selected value="esika">esika</option>
+                                            <option value="Lbel">Lbel</option>
+                                            <option value="cyzone">Cyzone</option>
                                         </select>
                                     </div>
                                 </div>
@@ -87,7 +87,6 @@
                 </div>
             </div>
         </div>
-
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
     </body>

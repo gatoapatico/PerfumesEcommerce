@@ -8,6 +8,7 @@ Controller\PedidoController.class
 Model\UsuarioModel.class
 Controller\ProductoController.class
 com\utp\bodegajavaweb\JAXRSConfiguration.class
+Controller\ImgController.class
 Model\ProductoModel.class
 Controller\CarritoController.class
 Entity\Usuario.class

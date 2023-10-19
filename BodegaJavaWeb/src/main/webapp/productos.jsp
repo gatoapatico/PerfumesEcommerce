@@ -25,16 +25,7 @@
         <p class="hidden" id="producto-buscado-id">${param.buscar}</p>
     </c:if>
     <main class="main-productos" id="main-productos">
-        <nav class="categorias">
-            <button data-categoria="CARNES, AVES Y PESCADOS">CARNES, AVES Y PESCADOS</button>
-            <button data-categoria="CONGELADOS">CONGELADOS</button>
-            <button data-categoria="LACTEOS">LACTEOS</button>
-            <button data-categoria="FRUTAS Y VERDURAS">FRUTAS Y VERDURAS</button>
-            <button data-categoria="PANADERIA Y PASTELERIA">PANADERIA Y PASTELERIA</button>
-            <button data-categoria="BEBIDAS">BEBIDAS</button>
-            <button data-categoria="CUIDADO PERSONAL">CUIDADO PERSONAL</button>
-            <button data-categoria="LIMPIEZA">LIMPIEZA</button>
-        </nav>
+        <%@include file="_nav.jsp" %>
         <h1>PRODUCTOS</h1>
         <div class="catalogo">
             <c:forEach items="${productos}" var="producto">
