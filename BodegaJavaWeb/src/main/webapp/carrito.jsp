@@ -23,7 +23,7 @@
         <%@include file="_header.jsp" %>
         <main class="main-carrito">
             <%@include file="_nav.jsp" %>
-            
+          
             <h1>TU CARRITO</h1>
             <div class="paneles">
                 <div class="productos">

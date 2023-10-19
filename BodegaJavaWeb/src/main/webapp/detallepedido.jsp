@@ -26,6 +26,7 @@
         <%@include file="_header.jsp" %>
         <main class="main-detalle-pedido">
             <%@include file="_nav.jsp" %>
+            
             <h1>DETALLE PEDIDO</h1>
             <div class="paneles" id="paneles">
                 <div class="panel panel1">

@@ -29,7 +29,7 @@
             <h1>PEDIDO CONFIRMADO</h1>
             <div class="paneles" id="paneles">
                 <div class="panel panel1">
-                    <b class="txt-confirmacion">¡Hemos confirmado tu pedido con éxito!</b>
+                    <b class="txt-confirmacion">Â¡Hemos confirmado tu pedido con Éxito!</b>
                     <p class="txt-envio-email">Puedes descargar tu comprobante de pago <button data-crearpdf="crearpdf">DESCARGAR COMPROBANTE</button></p>
                 </div>
                 <div class="contenedor-boleta" id="contenedor-boleta">
@@ -49,12 +49,12 @@
                                 <p>NOMBRE: <span class="tarjeta-nombre"><%=usuario.getNombre() + " " + usuario.getApellido()%></span></p>
                                 <p>DNI: <span class="tarjeta-dni"><%=usuario.getDocumentoNumero()%></span></p>
                                 <p>CORREO: <span class="tarjeta-correo"><%=usuario.getCorreo()%></span></p>
-                                <p>TELÉFONO: <span class="tarjeta-telefono"><%=usuario.getTelefono()%></span></p>
+                                <p>TELÃFONO: <span class="tarjeta-telefono"><%=usuario.getTelefono()%></span></p>
                             </div>
                             <div class="tarjeta medio-pago">
                                 <b>MEDIO DE PAGO</b>
                                 <p>PEDIDO: <span class="bold"><%=pedido.getCodigoUnico()%></span></p>
-                                <p class="no-bold">Pago con tarjeta de Crédito (Visa)</p>
+                                <p class="no-bold">Pago con tarjeta de CrÃ©dito (Visa)</p>
                                 <p class="no-bold">S/ <span><%=String.format("%.2f", pedido.getTotalPago())%></span></p>
                             </div>
                             <div class="tarjeta info-resumen">
@@ -62,7 +62,7 @@
 <%--                                <p class="no-bold">Subtotal <span>S/ <span><%=(pedido.getMetodoEnvio() == 1) ? String.format("%.2f", pedido.getTotalPago()) : String.format("%.2f", pedido.getTotalPago() - 5)%></span></span></p>--%>
                                 <p class="no-bold">Subtotal <span>S/ <span><%=String.format("%.2f", pedido.getSubTotalPago())%></span></span></p>
                                 <p class="no-bold">IGV (18%) <span>S/ <span><%=String.format("%.2f", pedido.getIgvPago())%></span></span></p>
-                                <p class="no-bold">Envío <span>S/ <span><%=String.format("%.2f", pedido.getEnvioPago())%></span></span></p>
+                                <p class="no-bold">EnvÃ­o <span>S/ <span><%=String.format("%.2f", pedido.getEnvioPago())%></span></span></p>
                                 <p class="no-bold tarjeta-total">Total <span>S/ <span><%=String.format("%.2f", pedido.getTotalPago())%></span></span></p>
                             </div>
                         </div>
@@ -70,10 +70,10 @@
                     <div class="panel panel3">
                         <div class="info-pedido">
                             <p>PEDIDO: <span><%=pedido.getCodigoUnico()%></span></p>
-                            <p>MÉTODO DE ENTREGA: <span><%=(pedido.getMetodoEnvio() == 1) ? "Retiro en tienda PERFUME" : "Entrega a domicilio"%></span></p>
+                            <p>MÃTODO DE ENTREGA: <span><%=(pedido.getMetodoEnvio() == 1) ? "Retiro en tienda PERFUME" : "Entrega a domicilio"%></span></p>
                             <p>FECHA: <span><%=DateFormats.formatoFechaDiaTexto(pedido.getFechaEntrega())%></span></p>
                             <p>HORA: <span><%="Entre las " + DateFormats.formatoHora(pedido.getHoraEntrega()) + " y las " + DateFormats.sumarHora(pedido.getHoraEntrega())%></span></p>
-                            <p>DIRECCIÓN: <span><%=pedido.getDireccionEntrega()%></span></p>
+                            <p>DIRECCIÃN: <span><%=pedido.getDireccionEntrega()%></span></p>
                         </div>
                         <table class="tabla-productos">
                             <thead>

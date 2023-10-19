@@ -267,7 +267,7 @@ document.addEventListener('click', function(e){
                     break;
                 case 'metodo-tienda':
                     document.getElementById('modalidad-resumen').textContent = 'RECOJO EN TIENDA'
-                    document.getElementById('direccion-resumen').textContent = 'tienda PERFUME - Calle García Rada 341';
+                    document.getElementById('direccion-resumen').textContent = 'tienda perfume - Calle García Rada 341';
                     contadorCampos++;
                     break;
             }

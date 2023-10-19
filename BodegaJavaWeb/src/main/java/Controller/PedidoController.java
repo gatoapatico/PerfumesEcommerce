@@ -50,7 +50,7 @@ public class PedidoController extends HttpServlet {
                 String fechaPedido = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
                 int usuarioId = Integer.parseInt((String) request.getParameter("usuario-id"));
                 int metodoEnvio = Integer.parseInt((String) request.getParameter("metodo-envio"));
-                String direccionEntrega = (metodoEnvio == 1) ? "bodega Marisol, Calle García Rada 341" : (String) request.getParameter("direccion-entrega");
+                String direccionEntrega = (metodoEnvio == 1) ? "Tienda Perfume, Calle García Rada 341" : (String) request.getParameter("direccion-entrega");
                 String fechaEntrega = (String) request.getParameter("fecha-entrega");
                 String horaEntrega = (String) request.getParameter("hora-entrega");
                 String responsableDocumento = (String) request.getParameter("responsable-documento");

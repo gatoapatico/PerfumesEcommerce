@@ -28,7 +28,7 @@
                 <div class="col p-3 text-bg-dark" style="border-top-left-radius: 1rem; border-bottom-left-radius: 1rem;">
                     <h5>Administrar Usuarios</h5>
                     <hr>
-                    <small class="text-justify">Gestiona de manera efectiva los datos de tus clientes y administradores en la bodega MARISOL</small>
+                    <small class="text-justify">Gestiona de manera efectiva los datos de tus clientes y administradores</small>
                     <br>
                     <a href="/BodegaJavaWeb/admin/admin_usuarios.jsp" class="btn btn-primary mt-3">Revisar Tabla de Usuarios</a> <br>
                     <a href="/BodegaJavaWeb/admin/admin_usuarios_agregar.jsp" class="btn btn-success m-3">Agregar nuevo usuario</a>
@@ -36,7 +36,7 @@
                 <div class="col p-3 text-light" style="background: #614BC3">
                     <h5>Administrar Productos</h5>
                     <hr>
-                    <small class="text-justify">Verifica el inventario de tus productos y agrega nuevos al catálogo de la bodega MARISOL</small>
+                    <small class="text-justify">Verifica el inventario de tus productos y agrega nuevos al catálogo de la tienda</small>
                     <br>
                     <a href="/BodegaJavaWeb/admin/admin_productos.jsp" class="btn btn-primary mt-3">Revisar Tabla de Productos</a> <br>
                     <a href="/BodegaJavaWeb/admin/admin_productos_agregar.jsp" class="btn btn-success m-3">Agregar nuevo Producto</a>

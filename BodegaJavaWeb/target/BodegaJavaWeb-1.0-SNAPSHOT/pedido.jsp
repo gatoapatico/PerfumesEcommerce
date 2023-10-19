@@ -22,11 +22,11 @@
     <body>
         <%@include file="_header.jsp" %>
         <main class="main-pedido" id="main-pedido">
-            <%@include file="_nav.jsp" %>
+                <%@include file="_nav.jsp" %>
             <h1>PROCESO DE PEDIDO</h1>
             <form action="PedidoController" method="POST">
                 <input hidden="hidden" type="text" name="action" value="realizar-pedido">
-                <input class="hidden" type="text" name="usuario-id" id="usuario-id" value="<%=usuario.getId()%>" readonly>
+                <input class="hidden" type="text" name="usuario-id" id="usuario-id" value="${usuario.getId()}" readonly>
                 <input class="hidden" type="text" id="usuario-password" value="<%=usuario.getPassword()%>" readonly>
                 <div class="paneles">
                     <div class="usuario">
@@ -42,17 +42,17 @@
                                 <div class="ux" id="ux-identificacion">
                                     <div class="dato-input whole">
                                         <label for="correo">Correo*</label>
-                                        <input type="email" name="usuario-correo" id="correo" value="<%=usuario.getCorreo()%>" readonly required>
+                                        <input type="email" name="usuario-correo" id="correo" value="${usuario.getCorreo()}" readonly required>
                                         <b class="campo-fail hidden">*Es obligatorio este campo</b>
                                     </div>
                                     <div class="dato-input">
                                         <label for="nombre">Nombre*</label>
-                                        <input type="text" name="usuario-nombre" id="nombre" value="<%=usuario.getNombre()%>" readonly required>
+                                        <input type="text" name="usuario-nombre" id="nombre" value="${usuario.getNombre()}" readonly required>
                                         <b class="campo-fail hidden">*Es obligatorio este campo</b>
                                     </div>
                                     <div class="dato-input">
                                         <label for="apellidos">Apellidos*</label>
-                                        <input type="text" name="usuario-apellido" id="apellidos" value="<%=usuario.getApellido()%>" readonly required>
+                                        <input type="text" name="usuario-apellido" id="apellidos" value="${usuario.getApellido()}" readonly required>
                                         <b class="campo-fail hidden">*Es obligatorio este campo</b>
                                     </div>
                                     <div class="dato-input">
@@ -64,12 +64,12 @@
                                     </div>
                                     <div class="dato-input">
                                         <label for="documento">Documento</label>
-                                        <input type="text" name="usuario-documento-numero" pattern="[0-9]{8,10}" id="documento" value="<%=(usuario.getDocumentoNumero() != null) ? usuario.getDocumentoNumero() : ""%>" required>
+                                        <input type="text" name="usuario-documento-numero" pattern="[0-9]{8,10}" id="documento" value="${not empty usuario.documentoNumero ? usuario.documentoNumero : ''}" required>
                                         <b class="campo-fail hidden">*Es obligatorio este campo</b>
                                     </div>
                                     <div class="dato-input">
                                         <label for="telefono">Telefono celular*</label>
-                                        <input type="text" name="usuario-telefono" pattern="[0-9]{7,}" id="telefono" value="<%=(usuario.getTelefono() != null) ? usuario.getTelefono() : ""%>" required>
+                                        <input type="text" name="usuario-telefono" pattern="[0-9]{7,}" id="telefono" value="${not empty usuario.telefono ? usuario.telefono : ''}" required>
                                         <b class="campo-fail hidden">*Es obligatorio este campo</b>
                                     </div>
                                 </div>
